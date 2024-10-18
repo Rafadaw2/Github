@@ -1,0 +1,28 @@
+{
+    "libros": [
+        {
+            "titulo": "Clean Code",
+            "autor": [
+                "Robert C. Martin"
+            ],
+            "anio": 2008,
+            "genero": "Programming"
+        },
+        {
+            "titulo": "The Pragmatic Programmer",
+            "autor": [
+                "Andrew Hunt",
+                "David Thomas"
+            ],
+            "anio": 1999,
+            "genero": "Programming"
+        },
+        {
+            "titulo": "Design Patterns",
+            "autor": [
+                "Erich Gamma","Richard Helm", "Ralph Johnson", "John Vlissides"],
+                "anio": 1994,
+                "genero": "Software Engineering"
+            }
+        ]
+    }

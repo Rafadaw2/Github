@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora dinamica</title>
+</head>
+<body>
+    <script>alert("Bienvenido a la calculadora dinamica de Rafa, primero te vamos a pedir dos numeros con los cuales"+
+        "vamos a operar y por último el tipo de operación que deseas realizar estan habilitadas sumas, restas,"+
+        " multiplicaciones y divisiones.");
+    
+    let dato1=parseFloat(prompt("Introduce el primer número."));
+    let dato2=parseFloat(prompt("Introduce el segundo número."));
+    let operación=prompt("Introduce la operación que deseas realizar. suma, resta, multiplicacion o division");
+    
+    if(operación.toLowerCase()=="suma"){
+        let resultado=dato1+dato2;
+        alert("El resultado es: "+resultado);
+    }else if(operación.toLowerCase()=="resta"){
+        resultado=dato1-dato2;
+        alert("El resultado es: "+resultado);
+    }else if(operación.toLowerCase()=="multiplicacion"){
+        resultado=dato1*dato2;
+        alert("El resultado es: "+resultado);
+    }else if(operación.toLowerCase()=="division"){
+        resultado=dato1/dato2;
+        alert("El resultado es: "+resultado);
+    }else{
+        alert("Los datos o la operación selecionada no son validos");
+    };</script>
+</body>
+</html>

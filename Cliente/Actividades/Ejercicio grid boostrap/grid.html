@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Titulo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Div 6 columnas numeradas centradas con colores de fondo diferentes-->
+
+    <div class="container text-center">
+        <p>Haz 6 div que tengan todos el mismo tamaño y dale un color a cada uno y en el centro debe aparecer el numero
+            del div 1, 2...
+
+            Haz un grid de tres columnas para pantallas grandes y dos para medianas.</p>
+        <!--grid que fija dos columnas con pantallas medianas y 3 con grandes-->
+        <div class="row row-cols-md-2 row-cols-lg-3">
+            <div class="col fondo1">
+                div1
+            </div>
+            <div class="col fondo2">
+                div2
+            </div>
+            <div class="col fondo3">
+                div3
+            </div>
+            <div class="col fondo4">
+                div4
+            </div>
+            <div class="col fondo5">
+                div5
+            </div>
+            <div class="col fondo6">
+                div6
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <p>Haz dos culumnas y dentro de cada una de la columnas haz otro grid con 2 elementos cada uno. En una fila
+            deben aparecer 4 2 y 2 y en el otro solo 2 pero en la columna izquierda 0 en la derecha</p>
+        <div class="row row-cols-2">
+            <div class="col-6 fondo1">
+                <div class="row">
+
+                    <div class="col-4 fondo2">div de 4</div>
+                    <div class="col-2 fondo3">div de 2</div>
+                    <div class="col-2 fondo4">div de 2</div>
+                </div>
+            </div>
+            <div class="col-6 fondo5">
+                <div class="row">
+
+                    <div class="col-2 fondo6">div de 2</div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--div con 3 columnas para pantallas grandes, dos en medianas-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

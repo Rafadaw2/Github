@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones flecha</title>
+    <script>
+        function cronometro(){
+            let hora=10, min=0,seg=0;
+          
+            setInterval(()=>{
+                if(seg==60){
+                min++;
+                seg=0;
+            }
+                return console.log(hora+":"+min+":"+seg++)},1000);
+            
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Hora" onclick="cronometro()">
+</body>
+</html>

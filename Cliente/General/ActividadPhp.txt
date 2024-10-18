@@ -1,0 +1,23 @@
+<?php
+	 $horas=[6,5,5,6,1,7,5,1,2,3,5,3,5,5,7,6.5,5,3];
+
+   $notas= [6,8,6,5,8,7,5,7,6,6,7,6,9,7,6,5,6];
+   
+   function calcularMedia($horas){
+     $sumatorio_h= array_sum($horas);
+     $media= $sumatorio_h/count($horas);
+     return $media;
+   }
+   echo calcularMedia($horas);
+   function calcularMediana ($horas){
+     short($horas);
+     
+       $mediana=(count($horas)%2==0)?($horas[count($horas)/2]+$horas[(count($horas)/2)-1]/2:
+       $horas[count($horas)/2;
+     
+     return $mediana;
+   }
+   echo calcularMediana($horas);
+   
+   
+?>

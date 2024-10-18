@@ -1,0 +1,13 @@
+
+.lista{
+    display: inline-block;
+}
+/* #cuerpo{
+    align-items: center;
+} */
+.parrafo{
+    display:inline-flex;
+    width: 40%;
+    align-items: center;
+    
+}
