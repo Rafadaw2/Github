@@ -2,7 +2,7 @@
 include 'datos.php';
 if(isset($_GET["busqueda"])){
     $busqueda=strtolower($_GET["busqueda"]);
-    //$busquedaSanitizada=htmlspecialchars($busqueda);
+    $busquedaSanitizada=htmlspecialchars($busqueda);
     echo "<h2>Resultados de la busqueda: </h2>";
     echo "<ul>";
     foreach($productos as $id=>$producto){
