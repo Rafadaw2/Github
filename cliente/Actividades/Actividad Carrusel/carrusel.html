@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel</title>
+    <script src="./carrusel.js"></script>
+    <style>
+        .carrusel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #img {
+            max-width: 30rem;
+            margin: 1rem;
+        }
+
+        .botones {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .marcadorPosicion {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body >
+    <div class="carrusel">
+        <div>
+            <input class="botones" type="button" value="<" onclick="cambiarFotoI()">
+        </div>
+        <div><img id='img' src='./img/paisaje1.jpg'></div>
+        <div>
+            <input class="botones" type="button" value=">" onclick="cambiarFotoD()">
+        </div>
+    </div>
+    <div class="marcadorPosicion">
+        <input type="radio" name="marcador" id="" checked>
+        <input type="radio" name="marcador" id="">
+        <input type="radio" name="marcador" id="">
+    </div>
+</body>
+
+</html>

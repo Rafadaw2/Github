@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuenta Atras</title>
     <script src="cuentaAtras.js"></script>
+    <style>
+        .pagina{
+            display: flex;                   
+            flex-direction: column;          
+            justify-content: center;          
+            align-items: center;             
+            height: 100vh;                    
+            margin: 0;
+        }
+    </style>
 </head>
-<body>
-    <input type="button" value="Comenzar" onclick="">
+<body class="pagina">
+    <input type="button" value="Comenzar" onclick="cuentaAtras()">
     <div id="reloj">
         <h1></h1>
     </div>
     <div id="gif">
-        <img src="" alt="">
+       
     </div>
+    <audio id='audio' controls><source type = 'audio/wav' src = './sonido/audio.mp3' ></audio >
 </body>
 </html>

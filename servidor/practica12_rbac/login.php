@@ -9,15 +9,17 @@ if(isset($_POST["username"],$_POST["password"])){
         if($clave==$usuario && $valor["password"]==$contraseña){
             $rol=$valor["rol"];
             if(count($rol)==1){
-                if( $rol=="admin"){
+                if( $rol[0]=="admin"){
                     header("Location: admin.html");
-                }elseif($rol=="user"){
+                }elseif($rol[0]=="user"){
                     header("Location: user.html");
-                }elseif($rol=="manager"){
+                }elseif($rol[0]=="manager"){
                     header("Location: manager.html");
                 }
             }elseif(count($rol)>1){
-                
+                echo "<p>Entrar como:</p><br>
+                <a href='$rol[0].html'>$rol[0]</a>
+                <a href='$rol[1].html'>$rol[1]</a>";
             }
         }
     }
