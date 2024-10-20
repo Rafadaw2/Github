@@ -9,10 +9,14 @@
         .respuestas {
             color: blue;
         }
+        .body{
+            
+            width: 80%;
+        }
     </style>
 </head>
 
-<body>
+<body class="body">
     <h1>Preguntas y respuestas</h1>
     <ul>
         <li>Implementa la práctica según las indicaciones que se proporcionan
@@ -42,7 +46,12 @@
         </li>
         <li>Añade el rol manager al esquema de seguridad y haz que algún usuario
             pueda acceder con este ROL. ¿ Qué partes has tenido que modificar?
-            <p class="respuestas"></p>
+            <p class="respuestas">He tenido que convertir en un array la posicion de los 
+                roles donde vienen los datos para tener en el caso de admin dos roles. Adapatar
+                el codigo a tratar ese elemento como array y darle opcion a admin de elegir el 
+                rol con el que quiere entrar a través de dos etiquetas a que le envian a la web del
+                rol selecionado.
+            </p>
         </li>
     </ul>
 </body>
