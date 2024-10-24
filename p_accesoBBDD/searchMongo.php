@@ -3,9 +3,10 @@ require 'vendor/autoload.php'; // Asegúrate de tener el autoload de Composer
 
 $servername = "mongodb://mongo:27017"; // Nombre del servicio MongoDB en docker-compose
 $dbname = "rpg_game"; // Nombre de la base de datos
-$characterName = "Ulises"; // Nombre del personaje a buscar
 
+if(isset($_GET['character'])){
 try {
+    $characterName =htmlspecialchars($_GET['character']); // Nombre del personaje a buscar
     // Crear conexión a MongoDB
     $client = new MongoDB\Client($servername);
     
@@ -26,4 +27,5 @@ try {
     }
 } catch (MongoDB\Driver\Exception\Exception $e) {
     echo "Error de conexión: " . $e->getMessage();
+}
 }

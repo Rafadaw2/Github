@@ -3,16 +3,18 @@ $servername = "mysql";  // Nombre del servicio definido en docker-compose.yml
 $username = "root";      // Nombre de usuario
 $password = "1234";      // Contraseña
 $dbname = "rpg_game";    // Nombre de la base de datos
+if(isset($_GET['character'])){
 
 try {
+    // Nombre del personaje a buscar
+    $characterName = htmlspecialchars($_GET['character']);
     // Crear conexión
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     
     // Establecer el modo de error de PDO a excepción
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    // Nombre del personaje a buscar
-    $characterName = 'Ulises';
+    
 
     // Preparar y ejecutar la consulta
     $stmt = $conn->prepare("
@@ -52,4 +54,4 @@ try {
 } catch (PDOException $e) {
     echo "Error de conexión: " . $e->getMessage();
 }
-
+}
