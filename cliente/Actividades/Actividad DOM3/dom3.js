@@ -1,13 +1,15 @@
+let i=0;
 function crearLista(){
     let saltoLinea=document.createElement("br");
     let uls=document.getElementsByTagName("ul");
     let lista=document.createElement("ul");
-    lista.id=uls.length;
+    
+    lista.id=i++;
     let numeroLista=uls.length+1;
     let botonlista=document.createElement("button");
     botonlista.innerHTML="Añadir a lista "+numeroLista;
-    indice=uls.length;
-    botonlista.onclick=function(){anadirElementoLista(indice)};
+    //No se porque funciona pero funciona
+    botonlista.onclick=function(){anadirElementoLista(lista.id)};
     document.body.append(saltoLinea);
     document.body.append(botonlista);
     document.body.append(lista);

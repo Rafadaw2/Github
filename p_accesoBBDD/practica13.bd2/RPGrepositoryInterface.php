@@ -10,7 +10,7 @@ public function findAllQuests();
 // Método para obtener todos los personajes
 public function findAllCharacters();
 // Método para obtener las quests asociadas a un personaje por su ID
-public function findQuestsByCharacterId(int $characterId);
+public function findQuestsByCharacterName(string $characterName);
 // Método para encontrar un personaje por su nombre
 public function findCharacterByName(string $name);
 }
