@@ -7,7 +7,7 @@ $password = "1234";      // Contraseña
 $dbname = "rpg_game";    // Nombre de la base de datos
 
 try{
-    $repositorio= new RPGRepositoryMYSQL("mysql",)
+    $repositorio= new RPGRepositoryMYSQL($servername,$dbname,$username,$password)
 }catch (PDOException $e) {
     echo 'Erro r
     de conexión: ' . $e->getMessage();

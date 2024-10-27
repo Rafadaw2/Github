@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrusel</title>
-    <script src="./carruselD.js"></script>
+    
     <style>
         .carrusel {
             display: flex;
@@ -27,6 +27,7 @@
         .marcadorPosicion {
             display: flex;
             justify-content: center;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -46,9 +47,10 @@
         <input type="radio" name="marcador" id="1">
         <input type="radio" name="marcador" id="2">
     </div>
-    <div>
-        <input type="button" value="Añadir foto" onclick="">
+    <div class="marcadorPosicion">
+        <input type="button" value="Añadir foto" onclick="añadirFoto()">
     </div>
+    <script src="./carruselD.js"></script>
 </body>
 
 </html>
