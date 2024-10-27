@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 require_once 'RPGRepositoryInterface.php';
 
 class RPGRepositoryMYSQL implements RPGRepositoryInterface{
@@ -24,7 +24,7 @@ class RPGRepositoryMYSQL implements RPGRepositoryInterface{
         $quests=$stmt->fetchAll(PDO::FETCH_ASSOC);
 
          // Mostrar el nombre del personaje
-    echo "<h1>Misiones de $name</h1>";
+        echo "<h1>Misiones de $name</h1>";
     }
     public function findAllQuests()
     {

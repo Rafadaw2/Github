@@ -1,16 +1,14 @@
 <?php
-require 'vendor/autoload.php';
-require_once 'RPGRepositoryInterface.php';
+require '../vendor/autoload.php';
+require_once './RPGRepositoryInterface.php';
 class RPGRepositoryMONGODB implements RPGRepositoryInterface {
 private $client;
 private $db;
 public function __construct($servername, $dbname, $username,
 $password) {
 // Conectar a la base de datos MongoDB
-$this->client = new
-MongoDB\Client("mongodb://$servername:27017");
-//$this->client = new
-MongoDB\Client("mongodb://$username:$password@$servername/$dbname");
+$this->client = new MongoDB\Client("mongodb://$servername:27017");
+//$this->client = new MongoDB\Client("mongodb://$username:$password@$servername/$dbname");
 $this->db = $this->client->selectDatabase($dbname);
 }
 // Método para encontrar una quest por su nombre
