@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos select</title>
+</head>
+<body>
+    <form id="miFormularioSelect">
+        <h3>Selecciona tu país:</h3>
+        <select name="pais" id="pais">
+          <option value="España">España</option>
+          <option value="México">México</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Colombia">Colombia</option>
+        </select>
+        
+        <button type="button" onclick="mostrarPaisSeleccionado()">Mostrar país seleccionado</button>
+      </form>
+      
+      <script>
+        function mostrarPaisSeleccionado() {
+          const selectPais = document.getElementById('pais');
+          const paisSeleccionado = selectPais.value;  // Obtenemos el valor seleccionado
+          alert('País seleccionado: ' + paisSeleccionado);
+        }
+      </script>
+      
+</body>
+</html>

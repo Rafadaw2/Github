@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo De checkBox</title>
+</head>
+<body>
+    <form id="miFormularioCheckbox">
+        <h3>Selecciona tus deportes favoritos:</h3>
+        <input type="checkbox" name="deporte" value="Fútbol">
+        <label for="futbol">Fútbol</label><br>
+        <input type="checkbox" name="deporte" value="Baloncesto">
+        <label for="baloncesto">Baloncesto</label><br>
+        <input type="checkbox" name="deporte" value="Tenis">
+        <label for="tenis">Tenis</label><br>
+        
+        <button type="button" onclick="mostrarDeportesSeleccionados()">Mostrar deportes seleccionados</button>
+    </form>
+      
+    <script>
+      function mostrarDeportesSeleccionados() {
+        const deportes = document.getElementsByName('deporte');
+        let seleccionados = [];
+        
+        // Recorrer todos los checkboxes para ver cuáles están seleccionados
+        for (let i = 0; i < deportes.length; i++) {
+          if (deportes[i].checked) {
+            seleccionados.push(deportes[i].value);
+          }
+        }
+    
+        if (seleccionados.length > 0) {
+          alert('Deportes seleccionados: ' + seleccionados.join(', '));
+        } else {
+          alert('No has seleccionado ningún deporte.');
+        }
+      }
+    </script>
+      
+</body>
+</html>
+
+

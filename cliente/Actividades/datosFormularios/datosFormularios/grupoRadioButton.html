@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo de Radio button</title>
+</head>
+<body>
+    <form id="miFormularioRadio">
+        <h3>Selecciona tu género musical favorito:</h3>
+        <input type="radio" name="musica" value="Rock">
+        <label for="rock">Rock</label><br>
+        <input type="radio" name="musica" value="Pop">
+        <label for="pop">Pop</label><br>
+        <input type="radio" name="musica" value="Jazz">
+        <label for="jazz">Jazz</label><br>
+        
+        <button type="button" onclick="mostrarGeneroMusical()">Mostrar género musical seleccionado</button>
+      </form>
+      
+      <script>
+        function mostrarGeneroMusical() {
+          const generos = document.getElementsByName('musica');
+          
+          // Recorrer los radio buttons para encontrar el seleccionado
+          for (let i = 0; i < generos.length; i++) {
+            if (generos[i].checked) {
+              alert('Género musical seleccionado: ' + generos[i].value);
+              break;  // Salimos del bucle después de encontrar el seleccionado
+            }
+          }
+        }
+      </script>
+      
+    
+</body>
+</html>

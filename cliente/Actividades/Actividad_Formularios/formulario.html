@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form class="" method="get" name="Registro">
+
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario" id="" onblur="valUser()" required>
+        <span id="user" style="color: red; "></span><br>
+        <span id="userInvalid" style="color: red; "></span><br>
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="">
+        <span id="pass" style="color: red; "></span><br>
+        <label for="passwordrepeat">Repite contraseña</label>
+        <input type="password" name="passwordrepeat" id="">
+        <span id="passrepeat" style="color: red; "></span><br>
+        <input type="button" value="Registrar" onclick="valForm()">
+    </form>
+    <script src="./val.js"></script>
+</body>
+</html>
