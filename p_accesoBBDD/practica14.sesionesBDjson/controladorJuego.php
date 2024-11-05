@@ -1,7 +1,15 @@
 <?php
 require_once 'Movimiento.php';
+require_once 'RepositoryMySQL.php';
+require_once 'vistaTablero.php';
 session_start();
 // Si se ha mandado un movimiento
+$servername = "mysql";  // Nombre del servicio definido en docker-compose.yml
+$username = "root";      // Nombre de usuario
+$password = "1234";      // Contraseña
+$dbname = "game_matrix";    // Nombre de la base de datos
+$repositorio=new RepositoryMySQL($servername,$dbname,$username,$password);
+$vista = new VistaTablero();
 if (isset($_GET['move'])) {
     // 1.- Obtener la posición actual y procesar el movimiento para actualizar posición
     $position = &$_SESSION['position']; // OJO fíjate en el operador &
@@ -19,9 +27,21 @@ if (isset($_GET['move'])) {
         case 'right':
             if ($position['col'] < 9) $position['col']++;
             break;
+        /*case 'search':   
+            echo "Hola";
+            $partidasGuardadas=$repositorio->findAllScores();
+            
+            $vista->mostrarPartidas($partidasGuardadas);
+            break;*/
         case 'exit':
             session_destroy();
             header('Location: index.php');
+    }
+    if($_GET['move']=='search'){
+        echo "Hola";
+            $partidasGuardadas=$repositorio->findAllScores();
+            
+            $vista->mostrarPartidas($partidasGuardadas);
     }
     // 2.- Guardar la trayectoria del movimiento
     //$_SESSION['moves'][] = ["row" => $position['row'], "col" =>$position['col']];
@@ -51,6 +71,8 @@ if (isset($_GET['move'])) {
         foreach ($_SESSION['moves'] as $movimiento) {
             echo "<pre>" . $movimiento->getFila() . "," . $movimiento->getColumna();
         }
+        //Guardamos los resultados
+        $repositorio->saveGame($_SESSION['score']);
         session_destroy(); // Terminar la sesión y la partida
         exit();
     } else {

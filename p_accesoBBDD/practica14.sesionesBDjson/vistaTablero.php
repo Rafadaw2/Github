@@ -34,6 +34,15 @@ class VistaTablero
         echo "<a href='controladorJuego.php?move=right'>Derecha</a>";
         echo "</br>";
         echo "<a href='controladorJuego.php?move=exit'>Salir</a>";
+        echo "<a href='controladorJuego.php?move=search'>Ver puntuaciones de partidas guardadas</a>";
         echo "</div>";
+    }
+    public function mostrarPartidas($arrayPartidas) {
+ 
+        foreach($arrayPartidas as $partida){
+            
+            
+            echo "Jugador: ".$partida['id_session'].", puntuación: ".$partida['score'].", fecha: ".$partida['date_session']."<br>";
+        }
     }
 }

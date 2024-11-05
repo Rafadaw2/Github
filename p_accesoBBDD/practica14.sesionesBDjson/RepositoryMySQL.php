@@ -9,12 +9,12 @@ class RepositoryMySQL{
         $sentencia="INSERT INTO game (score) VALUES
         (:score) ";
         $stmt=$this->con->prepare($sentencia);
-        $stmt->bindParam(":score", $name);
+        $stmt->bindParam(":score", $score);
         $stmt->execute();
 
     }
     public function findAllScores() :array {
-        $sentencia="SELECT * FROM quests";
+        $sentencia="SELECT * FROM game";
         $stmt=$this->con->query($sentencia);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
