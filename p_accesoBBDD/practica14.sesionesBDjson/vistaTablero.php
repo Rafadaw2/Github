@@ -2,7 +2,7 @@
 class VistaTablero
 {
     public function __construc() {}
-    public function mostrarTablero($pos, $meta, $score)
+    public function mostrarTablero($pos, $meta, $score/*$traps*/)
     {
         // Mostrar el tablero de 10x10 y los controles de movimiento
         echo "<h2>Juego: Mueve el personaje para llegar a la salida</h2>";
@@ -19,7 +19,9 @@ class VistaTablero
                 } elseif ($i == $exit['row'] && $j == $exit['col']) {
                     // Mostrar la salida
                     echo "<td style='background-color: yellow; color: black;'>E</td>"; // E para "Exit"
-                } else {
+                }/*else if(count($_SESSION['moves'])==4 && $i==$traps[]){
+                    $traps[]
+                } */else {
                     echo "<td></td>"; // Casilla vacía
                 }
             }
@@ -34,7 +36,7 @@ class VistaTablero
         echo "<a href='controladorJuego.php?move=right'>Derecha</a>";
         echo "</br>";
         echo "<a href='controladorJuego.php?move=exit'>Salir</a>";
-        echo "<a href='controladorJuego.php?move=search'>Ver puntuaciones de partidas guardadas</a>";
+        echo "<a href='verPartidasGuardadas.php'>Ver puntuaciones de partidas guardadas</a>";
         echo "</div>";
     }
     public function mostrarPartidas($arrayPartidas) {
@@ -44,5 +46,8 @@ class VistaTablero
             
             echo "Jugador: ".$partida['id_session'].", puntuación: ".$partida['score'].", fecha: ".$partida['date_session']."<br>";
         }
+    }
+    public function mostrarBombas() {
+        
     }
 }

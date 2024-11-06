@@ -36,6 +36,7 @@ if (isset($_GET['move'])) {
         case 'exit':
             session_destroy();
             header('Location: index.php');
+            break;
     }
     if($_GET['move']=='search'){
         echo "Hola";
