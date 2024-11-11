@@ -31,7 +31,7 @@ if (isset($_FILES['archivo_csv'])) {
     if (stripos($necesidades_ayuda, 'agua') !== false) {
         $agua = 1;
         }
-        // Asignar a $otros si no se encuentra ninguna palabra clave
+        // Asignar a $otros si no se encuentra ninguna palab ra clave
         if ($agua === 0 && $productos_limpieza === 0 &&
         $viveres === 0 && $medicinas === 0) {
         $otros = $necesidades_ayuda;
