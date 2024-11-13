@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile # Usar el Dockerfile personalizado
     container_name: php-apache8
     volumes:
-      - /home/ProyectosPHP/Github:/var/www/html # OJO AQUI PONER RUTA ~/ProyectosPHP
+      - ~/ProyectosPHP/Github:/var/www/html # OJO AQUI PONER RUTA ~/ProyectosPHP
       #-~/ProyectosPHP:/var/www/html  C:\Apache24\htdocs
     ports:
       - "8081:80"
