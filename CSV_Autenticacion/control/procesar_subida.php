@@ -1,6 +1,18 @@
 <?php
 require_once "../clases/RepositorioMYSQL.php";
 
+$servername = "mysql";  // Nombre del servicio definido en docker-compose.yml
+$username = "root";      // Nombre de usuario
+$password = "1234";      // Contraseña
+$dbname = "emergencia";    // Nombre de la base de datos
+
+$repositorio= new RepositorioMYSQL(
+    $servername,
+    $dbname,
+    $username,
+    $password
+);
+
 if (isset($_FILES['archivo_csv'])) {
     //1.- Abrir el archivo CSV y leer el nombre del municipio (primer campo)
     $rutaDestino = "../uploads/";
@@ -9,7 +21,7 @@ if (isset($_FILES['archivo_csv'])) {
     $datos = fgetcsv($punteroCSV);
     $datos = fgetcsv($punteroCSV);
     $municipio = $datos[0];
-    $folderPath = 'uploads/' . $municipio;
+    $folderPath = '/var/www/html/CSV_Autenticacion/uploads/' . $municipio;
 
     //Si no existe creamos la carpeta
     if (!file_exists($folderPath)) {
