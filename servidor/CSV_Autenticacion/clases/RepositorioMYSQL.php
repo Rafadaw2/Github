@@ -37,7 +37,7 @@ class RepositorioMYSQL
         $stmt = $this->conn->prepare($queryCheck);
         $stmt->bindParam(":nombre_poblacion", $nombre_poblacion);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($result['total'] > 0) {
             // Si el municipio existe, actualiza el registro
             $this->actualizarEstadoMunicipio(
@@ -147,13 +147,13 @@ class RepositorioMYSQL
     }
 
     public function obtenerNumeroTotalAfectados(): int {
-        $sentencia="SELECT SUM(personas_afectadas) AS SUMA FROM estado_municipios ORDER BY personas_afectadas";
+        $sentencia="SELECT SUM(personas_afectadas) AS suma FROM estado_municipios ORDER BY personas_afectadas";
         $stmt = $this->conn->query($sentencia);
         
         
         if ($stmt !== false) {
             $stmt->execute();
-            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
             return (int)$row['suma']; // Retorna la suma como un entero
             }
             // En caso de que la consulta falle, devolver 0 o lanzar una excepción

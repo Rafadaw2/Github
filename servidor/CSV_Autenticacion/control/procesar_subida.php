@@ -93,5 +93,6 @@ if (isset($_FILES['archivo_csv'])) {
         $otros
     );
     //7.- Cerrar el archivo
-    fclose($file);
+    fclose($punteroCSV);
+    header('Location: ../index.html');
 }
