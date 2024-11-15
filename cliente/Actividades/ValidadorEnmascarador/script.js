@@ -31,14 +31,14 @@ function validarEmail() {
             listaInvalidos.appendChild(elementoli);
         }
     }else{
-        
+        //listaInvalidos.style.display="none";
         let elementoli= document.createElement("li");
         elementoli.innerText=email;
-        elementoli.style.display="none";
+        //elementoli.style.display="none";
         console.log(email);
         listaInvalidos.appendChild(elementoli);
     }
 }
 function mostrarInvalidos(){
-    
+    listaInvalidos.style.display="block";
 }
