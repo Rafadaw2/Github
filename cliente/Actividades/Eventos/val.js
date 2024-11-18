@@ -1,6 +1,22 @@
 let usuario=document.getElementById("text");
 usuario.addEventListener("blur",valUser);
 
+/*Recordar que si quieres cambiar el texto de una etqieuta
+usaremos .innetTEXT o innerHTML (tambien para machacarlo 
+sustituyendolo por otra etiqueta. Sin embargo, cuando quieres
+acceder al texto de un input:text será con un .value al igual que
+para acceder a cualquier atributo.*/
+
+/*Eventos:
+    -blur: cuando pierde el foco.
+    -DOMContentLoaded: Se dispara cuando el DOM ha sido completamente 
+    cargado y analizado, pero antes de que los recursos como imágenes 
+    y hojas de estilo se hayan cargado.
+    -scroll: Se dispara repetidamente mientras el usuario desplaza (hace scroll)
+    el contenido visible de una página o elemento.
+    -load: Se dispara cuando toda la página, incluidas las imágenes, hojas de estilo 
+    y otros recursos, han sido completamente cargados.
+ */
 
 function valUser(){
     
@@ -26,7 +42,7 @@ function styleUser(event){
     usuario.style.backgroundColor="gray";
     usuario.style.color="white";
     }else if(event.type=="blur"){
-
+        //Para quitar un atributo.
         usuario.removeAttribute("style");
         
     }

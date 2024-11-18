@@ -4,6 +4,10 @@ function añadirElemento(){
     let nombreclave=prompt("Introduce la clave");
     let contenidovalor=prompt("Introduce el valor");
     array_elementos[nombreclave]=contenidovalor;
+    /*let elemento = {
+        nombreclave: contenidovalor
+    }
+    array_elementos*/
 }
 
 function borrarElementoPorClave(){

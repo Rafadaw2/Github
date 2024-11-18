@@ -3,11 +3,17 @@
 let div= document.getElementById("div");
 let lista1= document.createElement("ul");
 let lista2= document.createElement("ul");
+let h2=document.createElement("h2");
+h2.style.display="none";
+h2.innerText="Lista Invalidos";
 div.appendChild(lista1);
+div.appendChild(h2);
 div.appendChild(lista2);
 let listas=document.querySelectorAll("ul");
 let listaValidos=listas[0];
 let listaInvalidos=listas[1];
+
+
 
 function validarEmail() {
     let email=document.getElementById("1").value;
@@ -23,22 +29,29 @@ function validarEmail() {
             listaValidos.appendChild(elemento);
 
         }else{
-        
+            listaInvalidos.style.display="none";
             let elementoli= document.createElement("li");
             elementoli.innerText=email;
-            elementoli.style.display="none";
             console.log(email);
             listaInvalidos.appendChild(elementoli);
         }
     }else{
-        //listaInvalidos.style.display="none";
+        listaInvalidos.style.display="none";
         let elementoli= document.createElement("li");
         elementoli.innerText=email;
-        //elementoli.style.display="none";
         console.log(email);
         listaInvalidos.appendChild(elementoli);
     }
 }
 function mostrarInvalidos(){
-    listaInvalidos.style.display="block";
+    /*Nota si para faiclitar la lectura intentas parar el display por una variable:
+    let display=lista.Invalidos.style.display;
+    y luego intentas modificar display asignandole none o block NO ES VALIDO*/
+    if(listaInvalidos.style.display=="block"){
+        listaInvalidos.style.display="none";
+        h2.style.display="none";
+    }else{
+        listaInvalidos.style.display="block";
+        h2.style.display="block";
+    }
 }
