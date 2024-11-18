@@ -8,7 +8,7 @@
 
 
 $categorias = ['BBDD', 'Lenguajes de Programación', 'Plataformas', 'IA','Big Data'];
-
+/*
 if(isset($_COOKIE['categoria'])){
     
   header("Location: dashboardPreferencias.php");  
@@ -16,7 +16,7 @@ if(isset($_COOKIE['categoria'])){
 } else if(isset($_POST['categoria'])){
     setcookie("categoria", $_POST['categoria'],time()+3600);
     
-}
+}*/
 ?>
 
 <!DOCTYPE html>
