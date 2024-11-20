@@ -4,7 +4,13 @@ let btnPedirCarta = document.querySelectorAll("button")[1];
 let btnPlantarse = document.querySelectorAll("button")[2];
 let body = document.querySelector("body");
 
+/*Para los turnos, cuando se crean los jugadores puedo crear un array con
+numeros 1,2,3... y revolverlo asi los turnos cambian con una variable 
+let jugador actual=arrayJugadores[0] si te planta la posicion se incrementa
+cambiando asi de jugador y podria guardar en el la puntuación si quiero.*/
 
+/*Para aumentar la puntuación podría crear una función que a partir del numero
+a sumar y el jugador actual sumara la puntuación */
 
 
 let barajaJuego = [];
@@ -58,16 +64,21 @@ function crearPantalla() {
 }
 
 function crearJugadores(numeroJugadores) {
+    if(numeroJugadores<2){
+        numeroJugadores=2;
+    }
     //Creamos el div que contiene la info de cada jugador
     for(let i=0;i<Number(numeroJugadores);i++){
     let div = document.createElement("div");
     div.className = "col tex-center";
+    let idJugador=i+1;
 
     //Creamos div con nombre del jugador
     let divrow1=document.createElement("div");
     divrow1.className="row";
     let h1Jugador=document.createElement("h1");
     h1Jugador.id=i;
+    h1Jugador.innerText="Jugador"+idJugador;
     divrow1.appendChild(h1Jugador);
     div.appendChild(divrow1);
 
@@ -76,7 +87,13 @@ function crearJugadores(numeroJugadores) {
     divrow2.className="row";
     let h1Puntuacion=document.createElement("h1");
     h1Puntuacion.id=i;
+    h1Puntuacion.innerText="Puntuacion: ";
+    let puntuacion=document.createElement("span");
+    puntuacion.id=i;
+    puntuacion.innerText=0;
+    puntuacion.style.fontSize="5vh";
     divrow2.appendChild(h1Puntuacion);
+    divrow2.appendChild(puntuacion);
     div.appendChild(divrow2);
 
     //Añadimos el div con todo al html
@@ -126,6 +143,36 @@ function pedirCarta() {
     //Seleccionamos la ultima carta
     numeroCartas = barajaJuego.length;
     let cartaRobada = barajaJuego[numeroCartas - 1];
+
+    //Manejamos eleccion de valor si AS
+
+    if(cartaRobada.includes("A")){
+        //Destino
+        let cabecera=document.getElementsByClassName("container")[0];
+
+        //Generamos la estructura
+        let div=document.createElement("div");
+        div.className="row";
+
+        let elige=document.createElement("h3");
+        elige.innerText="Enhorabuena, has conseguido un AS, ¿que valor quieres elegir?";
+        div.append(elige);
+
+        let btnElec1=document.createElement("input");
+        btnElec1.type="button";
+        btnElec1.value="1";
+        div.appendChild(btnElec1);
+
+        let btnElec11=document.createElement("input");
+        btnElec11.type="button";
+        btnElec11.value="11";
+        btnElec11.className="mb-3";
+        div.appendChild(btnElec11);
+
+        //Lo añadimos a destino
+        cabecera.append(div);
+        
+    }
 
     //Seleccionamos las imagenes
     let cartasMesa = document.querySelector(".jugador-cartas");
