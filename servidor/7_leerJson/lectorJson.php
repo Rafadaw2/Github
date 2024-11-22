@@ -13,24 +13,32 @@ if($metodo=='POST'){
     echo 'Error subiendo archivo </br>';
 }
 
-/*Primero extraemos los datos del json en una cadena*/
+/*Primero extraemos los datos del json en una cadena con 
+file_get_contents pasandole la ruta donde esta*/
 $cadenaJson= file_get_contents($rutaDestinoArchivo);
 
 /*Luego con la función json_decode interpretamos la cadena y la 
 transformamos en un array u objeto. Si el segundo atributo de la función es
-false o se omite y en un array si el segundo atributo es true*/
+false o se omite y en un ARRAY si el segundo atributo es TRUE
+CON TRUE ARRAY
+SIN NADA OBJETO*/
 
-//Metodo 1, tratado como objeto:
-
+//Metodo 1, se trata como objeto al omitir el segundo parametro:
 
 $objetosJson= json_decode($cadenaJson);
+/*Aqui estamos arriba del todo para entrar a cada libro
+debemos bajar un nivel*/
 $librosObj=$objetosJson->libros;
+/*Una vez en el nivel correcto pordemos recorrerlo, tambien podriamos haber accedido desde el bucle directamente
+foreach($objetosJson as $librosObj->libro*/
+
 foreach($librosObj as $libro){
     $titulo=$libro->titulo;
     $autores=$libro->autor;
-    $listaAutores="";
+    //Implode me permite concatenar todos los elementos de un array con cierto separador
+    $listaAutores=implode(", ",$autores);
     $contador=count($autores);
-    foreach($autores as $autor ){
+    /*foreach($autores as $autor ){
         $contador--;
         $separador="";
         if($contador!=0){
@@ -40,7 +48,7 @@ foreach($librosObj as $libro){
         }
         $listaAutores.=$autor.$separador;
         
-    }
+    }*/
     echo 'Titulo: '.$titulo.'. Autor o autores: '.$listaAutores.'. </br>';
 }
 

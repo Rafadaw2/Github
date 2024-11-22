@@ -1,7 +1,9 @@
 <?php
 session_start();
+//Siempre debemos poner session_start() al principio para poder usar la sesion
 
 if (isset($_GET['libro'])) {
+    //htmlspecialchars sirve para sanitizar la entrada
     $libro = htmlspecialchars(($_GET['libro']));
     if (!isset($_SESSION['carrito'])) {
         $_SESSION['carrito'] = [];

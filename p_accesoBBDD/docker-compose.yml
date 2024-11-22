@@ -7,7 +7,7 @@ services:
     container_name: php-apache8
     volumes:
       - ~/ProyectosPHP/Github/Github:/var/www/html # OJO AQUI PONER RUTA ~/ProyectosPHP
-      #-~/ProyectosPHP:/var/www/html  C:\Apache24\htdocs
+      #- C:\Apache24\htdocs:/var/www/html
     ports:
       - "8081:80"
     depends_on:

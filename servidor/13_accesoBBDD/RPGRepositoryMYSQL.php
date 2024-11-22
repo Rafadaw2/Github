@@ -20,7 +20,7 @@ class RPGRepositoryMYSQL implements RPGRepositoryInterface{
 
         $stmt->bindParam(":characterName",$name);
         $stmt->execute();
-
+        //fetchAll devuelve varias filas y fetch una sola
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     public function findAllQuests():array

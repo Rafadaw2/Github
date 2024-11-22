@@ -7,7 +7,10 @@ $username = "root";      // Nombre de usuario
 $password = "1234";      // Contraseña
 $dbname = "rpg_game";    // Nombre de la base de datos
 
+/*Al pasar como parámetro action X nos permite segun el parametro que traiga la solicitud 
+hacer una cosa u otra*/
 try{
+    //No olvidar poner los datos correctos para inicializar el repo
     $repositorio= new RPGRepositoryMYSQL($servername,$dbname,$username,$password);
     $vista= new VistaHTML();
     if(isset($_GET['action']) && $_GET['action']==1){

@@ -11,10 +11,14 @@ if(isset($_POST["username"],$_POST["password"])){
             if(count($rol)==1){
                 if( $rol[0]=="admin"){
                     header("Location: admin.html");
+                    //Siempre debes usar exit después de header
+                    exit;
                 }elseif($rol[0]=="user"){
                     header("Location: user.html");
+                    exit;
                 }elseif($rol[0]=="manager"){
                     header("Location: manager.html");
+                    exit;
                 }
             }elseif(count($rol)>1){
                 echo "<p>Entrar como:</p><br>
