@@ -1,0 +1,23 @@
+body {
+    background-color: #f0f0f0; /* Color de fondo claro */
+}
+
+img {
+    width: 200px; /* Ancho de las imágenes */
+    height: auto;
+    border: 2px solid #000; /* Borde de 2px de color negro */
+    margin: 15px; /* Margen de 15px */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease; /* Transición para el efecto hover */
+}
+
+img:hover {
+    border: 2px dotted #f00; /* Borde punteado rojo al pasar el ratón */
+}
+
+figcaption {
+    text-align: center; /* Pie de foto centrado */
+    font-size: 14px;
+    color: #555;
+}
