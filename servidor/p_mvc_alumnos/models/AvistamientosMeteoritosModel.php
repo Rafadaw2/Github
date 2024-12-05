@@ -25,7 +25,7 @@ class AvistamientosMeteroritosModel
         foreach ($this->meteoritos as $meteorito) {
 
             if ($meteorito->getName() == $nombre) {
-                $resultado=$meteorito->getName();
+                $resultado=$meteorito;
             }
         }
         // Completa esta función para buscar un meteorito y devolverlo

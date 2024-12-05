@@ -8,7 +8,9 @@ function agregarAlCarrito(producto,idboton) {
   carrito.push(producto);
   let boton=document.getElementById(idboton);
   boton.disabled=true;
+  console.log("Antes"+idboton);
   actualizarCarrito();
+  console.log(idboton);
 }
 
 // Función para actualizar la interfaz del carrito
@@ -50,11 +52,17 @@ function mostrarProductos(){
   for(producto of inventario){
     addElementoDiv(producto);
   }
-  posicion=0;
+  let posicion=0;
   for(producto of inventario){
     let boton=document.getElementById(posicion);
-    boton.addEventListener("click",()=>{agregarAlCarrito(producto,posicion)});
+    console.log("antesvento"+posicion);
+    /*La función flecha al tomar el valor de la variable, tomará la más global
+    por tanto si le pongo posición tomara la posicion global que siempre es cero */
+    let a=posicion;
+    boton.addEventListener("click",()=>{agregarAlCarrito(producto,a)});
+    console.log(posicion);
     posicion++;
+  
 
   }
   posicion=0;
