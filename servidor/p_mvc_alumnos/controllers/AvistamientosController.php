@@ -33,7 +33,7 @@ class AvistamientosController {
     public function obtenerImpacto($tam,$velocidad){
         //Completar
         $impacto=$this->modelo->calcularEnergiaImpacto($tam,$velocidad);
-        $this->vistaImpacto->render($impacto);
+        $this->vistaImpacto->renderVisual($impacto);
 
     }
 }
