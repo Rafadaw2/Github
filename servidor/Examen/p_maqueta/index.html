@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Flota</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        body{
+            margin: 5rem;
+        }
+        li{
+            margin: 1rem;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Flota de Vehículos de Transporte</h1>
+    <h3><a href="./control/autenticar.php">Iniciar sesión Administrador</a></h3>
+    <ol>
+        <li><a href="./control/verIndicadoresExplotacion.php">Ver Indicadores de Explotación de Flota</a></li>
+        <li><a href="./control/mostrarPosicionesVehiculos.php">Mostrar Posiciones de Vehículos en Ruta</a></li>
+        <li><a href="./control/subirFlota.php">Cargar nuevos datos de Flota JSON (ADMIN)</a></li>
+        <li><a href="./control/subirFlotaCSV.php">Cargar nuevos datos de Flota CSV (ADMIN)</a></li>
+        <li><a href="./control/verVehiculosRevision.php">Ver vehículos para revisión (ADMIN)</a></li>
+        <li><a href="./control/verEntregaspendientes.php">Ver entregas pendientes (ADMIN)</a></li>
+        <li><a href="./formularioRetraso.html">Retrasar entregas (ADMIN)</a></li>
+    </ol>
+    <h3><a href="./control/cerrarSesion.php">Cerrar sesión</a></h3>
+</body>
+</html>
