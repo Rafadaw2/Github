@@ -1,0 +1,10 @@
+label, #boton{
+    display:block;
+    margin: 5px;
+}
+#enlace:hover, #boton:hover{
+    color: green;
+}
+#nombre:focus{
+    background-color: bisque;
+}
