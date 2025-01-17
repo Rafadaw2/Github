@@ -6,7 +6,7 @@
     <title>Subir flota</title>
 </head>
 <body>
-    <form action="./control/cargarNuevosDatosFlota.php" method="post">
+    <form action="./control/cargarNuevosDatosFlota.php" method="post" enctype="multipart/form-data">
         <label for="json">Sube un json con los nuevos vehiculos</label>
         <input type="file" name="json" ></br>
         <input type="submit" value="Subir">

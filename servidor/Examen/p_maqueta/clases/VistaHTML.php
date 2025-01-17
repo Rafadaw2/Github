@@ -17,6 +17,7 @@ class VistaHTML{
             echo 'superior al previsto</p></br>';
         }
     }
+    /*Representa datos de un ARRYAY con VARIAS FILAS en una TABLA */
     public function mostrarRendimiento($datos_rendimiento, $localidadMasEntregas, $costeConductor) {
         echo" <h3>Datos de rendimiento y coste</h3>
         <p>Datos de mantenimiento:</p>";
@@ -41,6 +42,23 @@ class VistaHTML{
 
 
     }
+        /*Representa datos de un ARRYAY con VARIAS FILAS en una LISTA */
+        public function mostrarPlantilla($datos_rendimiento, $localidadMasEntregas, $costeConductor) {
+            echo" <h3>Datos de rendimiento y coste</h3>
+            <p>Datos de mantenimiento:</p>";
+           
+            echo "<ul>";
+            foreach($costeConductor as $conductor){
+                echo "<li>
+                xxxx {$conductor['nombre']}
+                xxxx {$conductor['coste']}
+                </li>";
+            }
+            echo "</ul>";
+            
+    
+    
+        }
 
     public function mostrarVehiculos($vehiculos){
         echo"<h3>Posición de Vehículos en Ruta</h3>";
