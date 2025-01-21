@@ -63,9 +63,9 @@ class VistaHTML{
     public function mostrarVehiculos($vehiculos){
         echo"<h3>Posición de Vehículos en Ruta</h3>";
         echo "<table border=1>";
-        for($i=10;$i>0;$i--){
+        for($i=10;$i>=1;$i--){
             echo "<tr>";
-            for($j=0;$j<10;$j++){
+            for($j=1;$j<10;$j++){
                 echo "<td>";
                 $relleno=0;
                 foreach($vehiculos as $vehiculo){
