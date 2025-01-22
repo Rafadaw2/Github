@@ -1,37 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integración de Contenido Interactivo</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
-    <form onsubmit="return validar()" method="post">
-        <label for="">Nombre
-            <input type="text" name="" id="nombre">
-        </label>
-        <label for="">Correo electrónico
-            <input type="email" name="" id="email">
-        </label>
-        <label for="">Género
-            <input type="radio" name="genero" id="">Mujer
-            <input type="radio" name="genero" id="">Hombre
-        </label>
-        <label for="">Intereses
-            <input type="checkbox" name="" id="">
-        </label>
-        <label for="">País
-            <select name="pais" id="">
-                <option value="">No seleccionado</option>
-                <option value="">España</option>
-                <option value="">Francia</option>
-            </select>
-        <input type="submit" id="boton" value="Botón de envío">
-        <span style="color: red;" id="validacion"></span></br>
-    </form>
-    <a href="https://www.google./?hl=es" id="enlace">Ir a google</a>
+    <section class="centrado">
+        <h1>Formulario de registro</h1>
+    </section>
+    <section id="formulario">
+        <form onsubmit="return validar()" method="post">
+            <label for="">Nombre
+                <input type="text" name="" id="nombre">
+            </label>
+            <label for="">Correo electrónico
+                <input type="email" name="" id="email">
+            </label>
+            <label for="">Género
+                <input type="radio" name="genero" id="">Mujer
+                <input type="radio" name="genero" id="">Hombre
+            </label>
+            <label for="">Intereses
+                <input type="checkbox" name="" id="">
+            </label>
+                <select name="pais" id="">
+                    <option value="">No seleccionado</option>
+                    <option value="">España</option>
+                    <option value="">Francia</option>
+                </select>
+                <input type="submit" id="boton" value="Botón de envío">
+                <span style="color: red;" id="validacion"></span></br>
+        </form>
+    </section>
+    <section class="centrado">
+        <a href="https://www.google./?hl=es" id="enlace">Ir a google</a>
+    </section>
+    <section class="centrado">
+        <h3>InterfacesFly es el mejor aula de formación en web de toda España registrarte y disfruta del mejor contenido
+            educativo.</h3>
+        <strong>Nuestras aulas</strong>
+        <div id="img">
+
+            <figure>
+                <img src="./img/DALL·E 2025-01-22 19.00.43 - A modern computer classroom filled with students actively engaging with technology. The room features sleek desks, high-end computers with large monit.webp"
+                    alt="">
+                <figcaption>Aula de Inteligencia Artificial</figcaption>
+            </figure>
+            <figure>
+                <img src="./img/DALL·E 2025-01-22 19.00.54 - A futuristic computer lab classroom with a group of students working on advanced technology. The room has an innovative design, with curved desks, hol.webp"
+                    alt="">
+                <figcaption>Aula de Diseño</figcaption>
+    
+            </figure>
+            <figure>
+    
+                <img src="./img/DALL·E 2025-01-22 19.01.11 - A contemporary computer classroom designed for collaborative learning. The space has large communal tables with multiple computer workstations, each e.webp"
+                    alt="">
+                <figcaption>Aula de Backend</figcaption>
+            </figure>
+        </div>
+    </section>
+    <section id="verMas">
+        <button onclick="verMas()">Ver más...</button>
+    </section>
     <script src="./script.js"></script>
 </body>
+
 </html>

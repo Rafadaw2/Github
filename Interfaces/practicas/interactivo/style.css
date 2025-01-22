@@ -8,3 +8,32 @@ label, #boton{
 #nombre:focus{
     background-color: bisque;
 }
+
+img{
+    width: 25rem;
+    height: auto;
+}
+#img{
+    display: flex;
+    justify-content: center;
+}
+.centrado{
+    text-align: center;
+}
+#formulario{
+    display: flex;
+    justify-content: center;
+}
+form{
+    border: 3px solid rgba(172, 255, 47, 0.404);
+    width: fit-content;
+    padding: 3rem;
+    background-color: rgba(172, 255, 47, 0.062);
+
+}
+label, select, input, span{
+    margin: 8px;
+}
+#enlace{
+    padding-top: 10px;
+}

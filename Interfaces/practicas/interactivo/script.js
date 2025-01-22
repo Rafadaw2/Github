@@ -6,8 +6,19 @@ function validar(){
         return true;
     }else{
         let val=document.getElementById('validacion');
-        val.innerText="Debes introducir algo";
+        val.innerText="Debes introducir algo en los campos nombre y email";
         return false;
     }
+
+}
+function verMas(){
+    let bloque=document.getElementById('verMas');
+    let bloqueContenido=bloque;
+    if(bloqueContido==bloque){
+        bloque.innerText="";
+    }else{
+        bloque.
+    }
+    
 
 }
