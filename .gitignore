@@ -1,4 +1,5 @@
 /p_accesoBBDD/dataMongoDB/
 /p_accesoBBDD/dataMYSQL/
-/servidor/SymfonyProyectos
+/servidor/SymfonyProyectos/dataMYSQL
+/servidor/SymfonyProyectos/vendor
 /servidor/p_accesoBBDD/docker-compose.yml

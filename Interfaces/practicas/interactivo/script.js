@@ -12,12 +12,15 @@ function validar(){
 
 }
 function verMas(){
-    let bloque=document.getElementById('verMas');
-    let bloqueContenido=bloque;
-    if(bloqueContido==bloque){
-        bloque.innerText="";
+    let bloque=document.getElementById('ocultar');
+    let btn=document.getElementById('btn');
+    if(bloque.style.display!='none'){
+        bloque.style.display='none';
+        btn.innerText='Ver mas...';
     }else{
-        bloque.
+        bloque.style.display='';
+        btn.innerText='Ver menos...';
+        
     }
     
 

@@ -25,22 +25,28 @@
                 <input type="radio" name="genero" id="">Mujer
                 <input type="radio" name="genero" id="">Hombre
             </label>
-            <label for="">Intereses
-                <input type="checkbox" name="" id="">
+            <label for="">Intereses </br>
+                <input type="checkbox" name="intereses" id="" >Frontend
+                <input type="checkbox" name="intereses" id="" >Backend
+                <input type="checkbox" name="intereses" id="" >Sistemas
+                <input type="checkbox" name="intereses" id="" >Soporte
             </label>
                 <select name="pais" id="">
                     <option value="">No seleccionado</option>
                     <option value="">España</option>
                     <option value="">Francia</option>
                 </select>
-                <input type="submit" id="boton" value="Botón de envío">
-                <span style="color: red;" id="validacion"></span></br>
+                <input class="botones" type="submit" id="boton" value="Botón de envío">
+               <p id="validacion"></p>
         </form>
     </section>
-    <section class="centrado">
-        <a href="https://www.google./?hl=es" id="enlace">Ir a google</a>
+    <section id="verMas">
+        <button class="botones" id="btn" onclick="verMas()">Ver más...</button>
     </section>
     <section class="centrado">
+        <a href="https://www.google.es" id="enlace" target="_blank">Ir a google</a>
+    </section>
+    <section class="centrado" id="ocultar">
         <h3>InterfacesFly es el mejor aula de formación en web de toda España registrarte y disfruta del mejor contenido
             educativo.</h3>
         <strong>Nuestras aulas</strong>
@@ -65,9 +71,7 @@
             </figure>
         </div>
     </section>
-    <section id="verMas">
-        <button onclick="verMas()">Ver más...</button>
-    </section>
+
     <script src="./script.js"></script>
 </body>
 
