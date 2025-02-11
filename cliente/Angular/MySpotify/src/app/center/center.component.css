@@ -1,0 +1,6 @@
+div{
+    width: 80vh;
+    height: 70vh;
+    background-color: rgb(61, 61, 61);
+    display: flex;
+}
