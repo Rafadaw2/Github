@@ -1,0 +1,17 @@
+{
+    "name": "servidor-peliculas",
+    "version": "1.0.0",
+    "description": "Servidor Node.js para devolver películas con retardo aleatorio",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "fs": "^0.0.1-security",
+        "papaparse": "^5.5.2"
+    },
+    "author": "José Antonio",
+    "license": "MIT"
+}
